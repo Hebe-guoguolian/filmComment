@@ -1,0 +1,77 @@
+/*头部*/
+#header{
+    height: 46px;
+    line-height:46px;
+}
+#header .container{
+    height: 46px;
+    background: #002f16;
+    border-bottom: 1px solid #CCC;
+}
+#header .container .header-left p{
+    color:#f7f7f7;
+}
+#header .container .header-right .register{
+    margin-left:20px;
+}
+/*搜索框*/
+#header_main{
+    height:100px;
+    line-height:100px;
+
+}
+#header_main .container{
+    /*background: #06B9D1;*/
+}
+#header_main h1{
+    width: 150px;
+    color:#666;
+    font-weight:bold;
+    color:#002f16;
+    text-shadow: 2px 2px 2px #06B9D1;
+    position: relative;
+}
+#header_main h1 img{
+    position: absolute;
+    top:-25px;
+    left:60px;
+}
+#header_main .search-kuang{
+    margin-top:22px;
+    border:1px solid #002f16;
+    border-radius: 5px;
+}
+#header_main .search-kuang .search{
+    cursor: pointer;
+    color:#f7f7f7;
+    background: #002f16;
+}
+
+#header_nav{
+    border-bottom:1px solid #002f16;
+    line-height:36px;
+
+}
+#header_nav .container a{
+    font-size:18px;
+    font-weight:bolder;
+    text-decoration: none;
+    margin-right:20px;
+    color:#002f16;
+}
+#header_nav .container a:hover{
+
+}
+
+
+/*footer*/
+#footer .container{
+    background: #002f16;
+    height:36px;
+    line-height:36px;
+}
+#footer .container p{
+    color:#f9f9f9;
+    font-size:16px;
+    padding-left: 20px;
+}

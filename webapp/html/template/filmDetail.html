@@ -1,0 +1,53 @@
+<section id = "film_detail">
+    <div class = "container">
+        <div class = "row">
+            <div class = "col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                <div class = " row film-intro">
+                    <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                        <img ng-src = "{{data.imgpath}}" alt = "">
+                    </div>
+                    <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                        <h2 ng-bind = "data.title"></h2>
+                        <p><b>导演:</b> {{data.cotent.director}}</p>
+                        <p><b>编剧: </b>{{data.cotent.scriptwriter}}</p>
+                        <p><b>主演:</b> {{data.cotent.actors}}</p>
+                        <p><b>类型:</b>{{data.cotent.type}} </p>
+                        <p><b>上映日期:</b>{{data.cotent.date}} </p>
+                        <p><b>片长:</b> {{data.cotent.time}}</p>
+
+                        <p><b>简介:</b>{{data.cotent.intro}}</p>
+                    </div>
+                </div>
+                <div class = "film-comments">
+                    <h3>果宝们的影评</h3>
+                  
+                    <div class = "self-com">
+                        <p>
+                            <button class = "write">写影评</button>
+                        </p>
+                      <!--  影评提交-->
+                       
+						<input name = "comstring" ng-model = "com.comstring" style = "width:800px;height:100px;display:block;">
+						<div class = "submit">
+								<button ng-click = "comSubmit()" style="margin-top:10px">提交</button>
+						</div>
+                    </div>
+                    <!--果宝们的影评-->
+                    <div class = "guobao-com">
+                        <ul>
+                            <li ng-repeat = "(key,value) in data.comments">
+                                <p class = "name" ng-bind = "value.user.name"></p>
+                                <p class = "content" ng-bind = "value.comstring"></p>
+                                <p ng-bind = "value.date|date:'yyyy-MM-dd'" style = 'float:right'></p>
+                                <p ng-bind="key"></p>
+                            	
+                                <button style = 'margin-left:500px' ng-click = "deleteMe(key)">删影评</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</section>

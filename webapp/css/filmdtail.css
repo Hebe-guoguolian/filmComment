@@ -1,0 +1,64 @@
+body{
+    background: url("../images/panda3.jpg") no-repeat 600px 500px;
+}
+#header_nav .container .row a:nth-of-type(2){
+    font-size:24px;
+    font-weight:bold;
+    border-bottom: 1px solid #002f16;
+}
+
+#film_detail{
+    height: 900px;
+}
+#film_detail .film-intro{
+    margin-top:20px;
+}
+#film_detail .film-intro img{
+    width: 200px;
+   display: block;
+    margin-top:15px;
+}
+
+#film_detail .film-comments h3{
+    background: #002f16;
+    color:#fff;
+    padding:10px 10px;
+}
+#film_detail .film-comments button{
+    padding: 5px 10px 5px;
+    background: #002f16;
+    color:#fff;
+}
+#film_detail .film-comments p button:nth-of-type(1){
+    margin-right:60%;
+}
+#film_detail .film-comments textarea{
+    width: 80%;
+    height: 100px;
+}
+#film_detail .film-comments .submit button{
+    margin-left:75%;
+}
+
+#film_detail .guobao-com ul{
+    width:75%;
+    margin-top:30px;
+}
+#film_detail .guobao-com ul li{
+    border-top:1px solid #002f16;
+    padding-top:10px;
+    margin-bottom:20px;
+
+    /*background:#424242;*/
+}
+#film_detail .guobao-com ul li .name{
+    background: url("../images/panda_icon/Icon_animal_2_14.ICO") no-repeat top left;
+    font-size:18px;
+    color:#000;
+    padding-left: 32px;
+}
+#film_detail .guobao-com ul li .content{
+    text-indent: 2em;
+     font-size:14px;
+     color:#000;
+ }

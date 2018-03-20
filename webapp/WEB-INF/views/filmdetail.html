@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>电影详情</title>
+<link rel="stylesheet" href="../css/lib/cssreset-min.css">
+<link rel="stylesheet" href="../css/lib/bootstrap.min.css">
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/filmdtail.css">
+<script src="../js/lib/jquery.min.js"></script>
+<script src="../js/lib/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#addCommentBtn").click(function() {
+			$("#addComment").submit();
+		});
+	});
+</script>
+</head>
+<body>
+	<!--header-->
+	<header id="header">
+		<div class="container">
+			<div class="row">
+				<!--左边-->
+				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-7 header-left">
+					<p>hi，欢迎【${user.username}】来到果宝影评，享受电影的世界</p>
+				</div>
+				<!--右边-->
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-5 header-right">
+					<div class="modal fade" id="exampleModal" tabindex="-1"
+						role="dialog" aria-labelledby="exampleModalLabel">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal"
+										aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<!--登录表单-->
+									<form>
+										<div class="form-group">
+											<label for="recipient-name" class="control-label">用户名:</label>
+											<input type="text" class="form-control" id="recipient-name">
+										</div>
+										<div class="form-group">
+											<label for="recipient-password" class="control-label">密码:</label>
+											<input type="password" class="form-control"
+												id="recipient-password">
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default"
+										data-dismiss="modal">关闭</button>
+									<button type="button" class="btn btn-primary">提交</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="register.html" class="register"> </a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div id="header_main">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+					<h1>
+						果宝影评
+						<img src="../images/panda_icon/logo.ICO" alt="">
+					</h1>
+				</div>
+				<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+					<div class="input-group search-kuang">
+						<input type="text" class="form-control" placeholder="电影的名称"
+							aria-describedby="basic-addon2">
+						<span class="input-group-addon search" id="basic-addon2">搜索</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="header_nav">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<a href="../index.html">首页</a>
+					<a href="#">电影详情页</a>
+					<a href="mine.html">我的</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--con-->
+	<section id="con">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class=" row film-intro">
+						<div class="col-lg-3 col-md-4 col-sm-4 col-xs-4">
+							<img src="../images/p11.jpg" alt="">
+						</div>
+						<div class="col-lg-9 col-md-8 col-sm-8 col-xs-8">
+							<h2>雄狮 Lion (2016)</h2>
+							<p>
+								<b>导演:</b> 加斯·戴维斯
+							</p>
+							<p>
+								<b>编剧: </b>萨罗·布赖尔利 / 卢克·戴维斯
+							</p>
+							<p>
+								<b>主演:</b> 戴夫·帕特尔 / 妮可·基德曼 / 鲁妮·玛拉 / 大卫·文翰 / 纳瓦祖丁·席迪圭
+							</p>
+							<p>
+								<b>类型:</b> 剧情
+							</p>
+							<p>
+								<b>上映日期:</b> 2017-03(中国大陆) / 2016-09-10(多伦多电影节) /
+								2017-01-19(澳大利亚)
+							</p>
+							<p>
+								<b>片长:</b> 118分钟
+							</p>
+
+							<p>
+								<b>简介：</b>影片根据畅销书《漫漫寻家路》改编，故事源于作者萨罗·布莱尔利的一段真实经历。五岁时萨罗在印度的火车上不小心与家人走散，他在加尔各答的街头流浪了几个星期，之后被送进一所孤儿院，并被澳大利亚的一对夫妇收养。25年后，他开始凭借隐约的记忆，用谷歌地球去寻找过去的家。
+							</p>
+						</div>
+					</div>
+					<div class="film-comments">
+						<h3>果宝们的影评</h3>
+						<!--自已写评论-->
+						<div class="self-com">
+							<p>
+								<button class="write">写影评</button>
+								<button class="change">修改</button>
+								<button class="add">增加</button>
+								<button class="delete">删除</button>
+							</p>
+							<form id="addComment" action="/comPorts/filmdetailCommit.do"
+								method="post">
+								<textarea name="comstring"></textarea>
+								<input type="hidden" name="filmId" value="2">
+							</form>
+							<div class="submit">
+								<button id="addCommentBtn">提交</button>
+							</div>
+						</div>
+						<!--果宝们的影评-->
+						<div class="guobao-com">
+							<ul>
+								<li>
+									<p class="name">果宝一：</p>
+									<p class="content">你说的健康合法开始的地方了空间</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!--<footer id="footer">-->
+	<!--<div class="container">-->
+	<!--<p>果宝们，快点来发布你们的影评吧!!!</p>-->
+	<!--</div>-->
+	<!--</footer>-->
+</body>
+</html>

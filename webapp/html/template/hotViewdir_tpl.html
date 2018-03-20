@@ -1,0 +1,10 @@
+<div id="hot_film">
+  <ul>
+    <li ng-repeat="(key,value) in data" ui-sref="hotFilm.detail({id:value.id})" ng-click="clickMe()">
+          <dl>
+              <dt><img ng-src="{{value.imgpath}}"></dt>
+              <dd ng-bind="value.title"></dd>
+          </dl>
+      </li>
+  </ul>
+</div>

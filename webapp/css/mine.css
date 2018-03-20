@@ -1,0 +1,57 @@
+
+#header_nav .container .row a:nth-of-type(3){
+    font-size:24px;
+    font-weight:bold;
+    border-bottom: 1px solid #002f16;
+}
+.con{
+    height: 600px;
+}
+.section .row{
+    height: 600px;
+}
+.content{
+    height: 100%;
+    background: url("../images/panda7.jpg") no-repeat;
+    background-size: cover;
+}
+.content .my-infor{
+    width: 40%;
+    height: 70%;
+    background: #fff;
+    border-radius: 20px;
+    margin-top:15%;
+    margin-left:50%;
+    
+}
+.my-infor h3{
+    background: #002f16;
+    color:#fff;
+    padding:10px 0;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.my-infor p{
+    color:#002f16;
+    padding-left:10px;
+    font-size:18px;
+    text-align: center;
+}
+.my-infor p span{
+    font-weight:bolder;
+}
+.my-infor p img{
+    width: 80px;
+    height: 80px;
+}
+.panda{
+    text-align: center;
+    margin-top:25%;
+}
+
+
+
+
+
+
